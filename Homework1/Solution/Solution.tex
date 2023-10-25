@@ -140,4 +140,62 @@
                 G(4) &= c \\
             \end{align*}
 
+    \pagebreak
+    \section{Problem 4}
+
+        \subsection{\( \neg p \land q \)}
+            \begin{tabular}{|c|c|c|c|}
+                \hline
+                \( p \) & \( q \) & \( \neg p \) & \( \neg p \land q \) \\
+                \hline
+                T & T & F & F \\
+                T & F & F & F \\
+                F & T & T & T \\
+                F & F & T & F \\
+                \hline
+            \end{tabular}
+
+        \subsection{\( \neg(p \land q) \lor (p \lor q) \)}
+            \begin{tabular}{|c|c|c|c|c|c|}
+                \hline
+                \( p \) & \( q \) & \( p \land q \) & \( \neg(p \land q) \) & \( p \lor q \) & \( \neg(p \land q) \lor (p \lor q) \) \\
+                \hline
+                T & T & T & F & T & T \\
+                T & F & F & T & T & T \\
+                F & T & F & T & T & T \\
+                F & F & F & T & F & T \\
+                \hline
+            \end{tabular}
+
+        \subsection{\( p \land (q \land r) \)}
+            \begin{tabular}{|c|c|c|c|c|}
+                \hline
+                \( p \) & \( q \) & \( r \) & \( q \land r \) & \( p \land (q \land r) \) \\
+                \hline
+                T & T & T & T & T \\
+                T & T & F & F & F \\
+                T & F & T & F & F \\
+                T & F & F & F & F \\
+                F & T & T & T & F \\
+                F & T & F & F & F \\
+                F & F & T & F & F \\
+                F & F & F & F & F \\
+                \hline
+            \end{tabular}
+
+        \subsection{\( p \land (\neg q \lor r) \)}
+            \begin{tabular}{|c|c|c|c|c|c|}
+                \hline
+                \( p \) & \( q \) & \( r \) & \( \neg q \) & \( \neg q \lor r \) & \( p \land (\neg q \lor r) \) \\
+                \hline
+                T & T & T & F & T & T \\
+                T & T & F & F & F & F \\
+                T & F & T & T & T & T \\
+                T & F & F & T & T & T \\
+                F & T & T & F & T & F \\
+                F & T & F & F & F & F \\
+                F & F & T & T & T & F \\
+                F & F & F & T & T & F \\
+                \hline
+            \end{tabular}
 \end{document}
