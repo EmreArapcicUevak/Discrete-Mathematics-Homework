@@ -73,6 +73,8 @@
 
 % Custom commands
 
+% Custom colours
+\definecolor{darkyellow}{rgb}{0.9,0.7,0}
 
 \begin{document}
 	\maketitle
@@ -207,4 +209,78 @@
                 F & F & T & T & F & T & T \\ \hline
                 F & F & F & T & F & T & T \\ \hline
             \end{tabular}
+
+    \pagebreak
+    \section{Problem 4}
+        \subsection*{6.}
+            \begin{tabular}{|c|c|c|c|c|}
+                \hline
+                $p$ & $q$ & \cellcolor{yellow}$p \rightarrow q$ & \cellcolor{yellow}$q \rightarrow p$ & \cellcolor{orange}$p \lor q$ \\
+                \hline
+                \rowcolor{lightgray} T & T & T & T & T \\
+                T & F & F & T & T \\
+                F & T & T & F & T \\
+                \rowcolor{lightgray} F & F & T & T & F \\
+                \hline
+            \end{tabular}
+
+            This argument is \textbf{FALSE}
+
+
+        \subsection*{7.}
+            \begin{tabular}{|c|c|c|c|c|c|c|c|}
+                \hline
+                \cellcolor{yellow}$p$ & $q$ & $\neg q$ & \cellcolor{orange}$r$ & \cellcolor{yellow}$p \rightarrow q$ & \cellcolor{yellow}$\neg q \vee r$ & $r$ \\
+                \hline
+                \rowcolor{lightgray} T & T & F & T & T & T & T \\
+                T & T & F & F & T & F & F \\
+                T & F & T & T & F & T & T \\
+                T & F & T & F & F & T & F \\
+                F & T & F & T & T & T & T \\
+                F & T & F & F & T & F & F \\
+                F & F & T & T & T & T & T \\
+                F & F & T & F & T & T & F \\
+                \hline
+            \end{tabular}
+
+            The argument is \textbf{TRUE}
+
+        \subsection*{8.}
+            \begin{tabular}{|c|c|c|c|c|c|c|}
+                \hline
+                $p$ & $q$ & $\neg q$ & \cellcolor{orange}$r$ & \cellcolor{yellow}$p \vee q$ & \cellcolor{yellow}$p \rightarrow \neg q$ & $\cellcolor{yellow}p \rightarrow r$\\
+                \hline
+                T & T & F & T & T & F & T \\
+                T & T & F & F & T & F & F \\
+                \rowcolor{lightgray} T & F & T & T & T & T & T \\
+                T & F & T & F & T & T & F \\
+                \rowcolor{lightgray}  F & T & F & T & T & T & T \\
+                \rowcolor{lightgray}  F & T & F & F & T & T & T \\
+                F & F & T & T & F & T & T \\
+                F & F & T & F & F & T & T \\
+                \hline
+            \end{tabular}
+
+        The argument is \textbf{FALSE}
+
+        \subsection*{9.}
+            \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+                \hline
+                $p$ & $q$ & $\neg q$ & $r$ & \cellcolor{orange}$\neg r$ & $p \land q$ & \cellcolor{yellow}$p \land q \rightarrow \neg r$ & \cellcolor{yellow}$p \vee \neg q$ & \cellcolor{yellow}$ \neg q \rightarrow p$ \\
+                \hline
+                T & T & F & T & F & T & F & T & T \\
+                \rowcolor{lightgray} T & T & F & F & T & T & T & T & T \\
+                \rowcolor{lightgray} T & F & T & T & F & F & T & T & T \\
+                \rowcolor{lightgray} T & F & T & F & T & F & T & T & T \\
+                F & T & F & T & F & F & T & F & T \\
+                F & T & F & F & T & F & T & F & T \\
+                F & F & T & T & F & F & T & T & F \\
+                F & F & T & F & T & F & T & T & F \\
+                \hline
+            \end{tabular}
+
+            The argument is \textbf{FALSE}
+
+        \subsection*{Explenation}
+            In logic, an argument is considered \textbf{valid} if, whenever the \textcolor{darkdarkyellow}{premises} are true, the \textcolor{orange}{conclusion} must also be true. If there exists a situation where the \textcolor{darkyellow}{premises} are all true, but the \textcolor{orange}{conclusion} is false, then the argument is not valid. This relationship ensures that if one accepts the \textcolor{darkyellow}{premises} to be true, then they must also accept the \textcolor{orange}{conclusion} to be true for the argument to hold its validity.
 \end{document}
