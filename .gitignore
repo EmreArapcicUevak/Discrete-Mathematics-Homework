@@ -6,3 +6,4 @@
 *.dvi
 out/
 template.pdf
+.DS_Store
