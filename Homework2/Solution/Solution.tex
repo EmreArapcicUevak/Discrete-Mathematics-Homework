@@ -115,4 +115,96 @@
                 \item \( p \land r \)
                 \item \( r \land (p \lor q )\)
             \end{enumerate}
+
+    \pagebreak
+    \section{Problem 2}
+        \subsection{\( \neg p \land q \)}
+            \begin{tabular}{|c|c|c|c|}
+                \hline
+                $p$ & $q$ & $\neg p$ & $\neg p \land q$ \\ \hline
+                T   &  T  &  F  &  F  \\ \hline
+                T   &  F  &  F  &  F  \\ \hline
+                F   &  T  &  T  &  T  \\ \hline
+                F   &  F  &  T  &  F  \\ \hline
+            \end{tabular}
+        \subsection{\( p \land (q \land r) \)}
+            \begin{tabular}{|c|c|c|c|c|}
+                \hline
+                $p$ & $q$ & $r$ & $q \land r$ & $p \land (q \land r)$ \\ \hline
+                T & T & T & T & T \\ \hline
+                T & T & F & F & F \\ \hline
+                T & F & T & F & F \\ \hline
+                T & F & F & F & F \\ \hline
+                F & T & T & T & F \\ \hline
+                F & T & F & F & F \\ \hline
+                F & F & T & F & F \\ \hline
+                F & F & F & F & F \\ \hline
+            \end{tabular}
+
+        \subsection{\( \neg (p \land q) \lor (p \lor q) \)}
+            \begin{tabular}{|c|c|c|c|c|}
+                \hline
+                $p$ & $q$ & $\neg (p \land q)$ & $p \lor q$ & $\neg (p \land q) \lor (p \lor q)$ \\ \hline
+                T   & T   & F                  & T          & T                              \\ \hline
+                T   & F   & T                  & T          & T                              \\ \hline
+                F   & T   & T                  & T          & T                              \\ \hline
+                F   & F   & T                  & F          & T                              \\ \hline
+            \end{tabular}
+
+        \subsection{\( p \land (\neg q \lor r) \)}
+            \begin{tabular}{|c|c|c|c|c|c|}
+                \hline
+                $p$ & $q$ & $r$ & $\neg q$ & $\neg q \lor r$ & $p \land (\neg q \lor r)$ \\ \hline
+                T   & T   & T   & F        & T               & T                         \\ \hline
+                T   & T   & F   & F        & F               & F                         \\ \hline
+                T   & F   & T   & T        & T               & T                         \\ \hline
+                T   & F   & F   & T        & T               & T                         \\ \hline
+                F   & T   & T   & F        & T               & F                         \\ \hline
+                F   & T   & F   & F        & F               & F                         \\ \hline
+                F   & F   & T   & T        & T               & F                         \\ \hline
+                F   & F   & F   & T        & T               & F                         \\ \hline
+            \end{tabular}
+    \pagebreak
+    \section{Problem 3}
+        \subsection{Logical Equivalence: \( p \rightarrow (q \lor r) \Leftrightarrow (p \land \neg q) \rightarrow r \)}
+            \begin{tabular}{|c|c|c|c|c|c|c|c|}
+                \hline
+                $p$ & $q$ & $r$ & $q \lor r$ & $p \rightarrow (q \lor r)$ & $\neg q$ & $p \land \neg q$ & $(p \land \neg q) \rightarrow r$ \\ \hline
+                T & T & T & T & T & F & F & T \\ \hline
+                T & T & F & T & F & F & F & T \\ \hline
+                T & F & T & T & T & T & T & T \\ \hline
+                T & F & F & F & F & T & T & F \\ \hline
+                F & T & T & T & T & F & F & T \\ \hline
+                F & T & F & T & T & F & F & T \\ \hline
+                F & F & T & T & T & T & F & T \\ \hline
+                F & F & F & F & T & T & F & T \\ \hline
+            \end{tabular}
+
+        \subsection{Logical Equivalence: \( p \land (q \lor r) \Leftrightarrow (p \land q) \lor (p \land r) \)}
+            \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+                \hline
+                $p$ & $q$ & $r$ & $q \lor r$ & $p \land q$ & $p \land r$ & $(p \land q) \lor (p \land r)$ & $p \land (q \lor r)$ \\ \hline
+                T & T & T & T & T & T & T & T \\ \hline
+                T & T & F & T & T & F & T & T \\ \hline
+                T & F & T & T & F & T & T & T \\ \hline
+                T & F & F & F & F & F & F & F \\ \hline
+                F & T & T & T & F & F & F & F \\ \hline
+                F & T & F & T & F & F & F & F \\ \hline
+                F & F & T & T & F & F & F & F \\ \hline
+                F & F & F & F & F & F & F & F \\ \hline
+            \end{tabular}
+
+        \subsection{Logical Equivalence: \( p \rightarrow (q \rightarrow r) \Leftrightarrow (p \land q) \rightarrow r \)}
+            \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+                \hline
+                $p$ & $q$ & $r$ & $q \rightarrow r$ & $p \land q$ & $p \rightarrow (q \rightarrow r)$ & $(p \land q) \rightarrow r$ \\ \hline
+                T & T & T & T & T & T & T \\ \hline
+                T & T & F & F & T & F & F \\ \hline
+                T & F & T & T & F & T & T \\ \hline
+                T & F & F & T & F & T & T \\ \hline
+                F & T & T & T & F & T & T \\ \hline
+                F & T & F & F & F & T & T \\ \hline
+                F & F & T & T & F & T & T \\ \hline
+                F & F & F & T & F & T & T \\ \hline
+            \end{tabular}
 \end{document}
